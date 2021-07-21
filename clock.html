@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flash Focus Focus Helper</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+a:link, a:visited {
+  text-decoration: none;
+}
+</style>
+<style>
+.button {
+  background-color:#b6bbc2;
+  border: black;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #a1a5ab;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: candara;
+}
+
+/* Style the header */
+header {
+
+  background-image: url('harmony.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: ;
+  width: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1><font face= "candara">The Focus Clock</font></h1>
+<br></br>
+</header>
+
+<nav>
+<button class= "button"><a href="index.html"><font face= "candara" color= "black">Focus Helper Home Page</font></a></button>
+<button class= "button"><a href="clock.html"><font face= "candara" color= "black">The Focus Clock</font></a></button>
+<button class= "button"><a href="bio.html"><font face= "candara" color= "black">About The Developer</font></a></button>
+ </nav>
+  
+  <article>
+    <h1>Timer Buttons</h1>
+    <p><font face="candara"> The timer buttons enable you to set an alert for a certain interval of time such as 10 minutes, 15 minutes, 30 minutes or 45 minutes. </font></p>
+<!-- 1 Minute Timer Button -->
+<audio id="myHAudio">
+  
+  <source src="sound.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<button class= "button" onclick= "myHFunction1()"><font face="candara">1 Minute Timer(for testing)</font></button>
+<script>
+function mySound() {
+ var x = document.getElementById("myHAudio");
+  x.play(); 
+  alert('This is a friendly reminder to focus on your work for the next interval of time. If you choose to stop this ongoing cycle, click the Stop Time Interval button. Please remember that the timers are going in intervals of the amount of time you chose.');
+
+}
+function myHFunction1() {
+ alert('The timer is going to start now.');
+ setInterval(mySound,60000);
+
+
+ 
+}
+</script>
+
+
+<!-- 10 Minute Timer Button -->
+
+<button class= "button" onclick="myHFunction3()"><font face="candara">10 Minute Timer</font></button>
+<script>
+function myHFunction3() {
+  alert('The timer is going to start now.');
+  setTimeout(mySound,600000);
+  
+  
+}
+</script>
+
+<!-- 15 Minute Timer Button -->
+	
+<button class= "button" onclick= "myHFunction4()"><font face="candara">15 Minute Timer</font></button>
+<script>
+function myHFunction4() {
+  alert('The timer is going to start now.');
+  setTimeout(mySound,900000);
+}
+</script>
+<!-- 30 Minute Timer Button -->
+	
+<button class= "button" onclick= "myHFunction5()"><font face="candara">30 Minute Timer</font></button>
+<script>
+function myHFunction5() {
+  alert('The timer is going to start now.');
+  setTimeout(mySound,1800000);
+}
+</script>
+
+
+<!-- 45 Minute Timer Button -->
+	
+<button class= "button" onclick= "myHFunction6()"><font face="candara">45 Minute Timer</font></button>
+<script>
+function myHFunction6() {
+  alert('The timer is going to start now.');
+  setTimeout(mySound,2700000);
+}
+</script>
+
+<!-- 1 Hour Button -->
+	
+<button class= "button" onclick= "myHFunction7()"><font face="candara">1 Hour Timer</font></button>
+<script>
+function myHFunction7() {
+  alert('The timer is going to start now.');
+  setTimeout(mySound,3600000);
+}
+</script>
+
+  <h1><font face= "candara">Cancel Timer</font></h1>
+<p></p>  
+<button class= "button" onclick= location.reload(); alert('You have stopped the time intervals');><font face="candara">Cancel Timer</font></button>
+
+  </article>
+
+
+
+
+</body>
+
+</html>
